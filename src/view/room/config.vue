@@ -154,6 +154,10 @@
 									<el-button @click='copy' :data-clipboard-text='studio.upstream_address' size="small" class="copy" type="primary">复制</el-button>
 								</div>
 								<p>{{studio.upstream_address}}</p>
+								<div class='title'>
+									扫我推流
+								</div>
+								<qrcode :val="studio.upstream_address"></qrcode>
 
 								<div class="title">预览地址
 									<el-button @click='copy2' :data-clipboard-text='"http://tv.icloudinn.com/"+studio.id' size="small" class="copy copy2" type="primary">复制</el-button>
